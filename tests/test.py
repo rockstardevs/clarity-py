@@ -19,7 +19,7 @@ from unittest.mock import patch
 class TestClarity(unittest.TestCase):
     """Unit tests for clarity logger."""
 
-    def run_test(self, method: str, color: str, use_str: bool = True) -> None:
+    def _run_test(self, method: str, color: str, use_str: bool = True) -> None:
         with patch("clarity.logging.{}".format(method)) as mocked_method:
             message = "test {} message".format(method)
             if use_str:
@@ -40,7 +40,7 @@ class TestClarity(unittest.TestCase):
             "debug": fore.STEEL_BLUE,
         }
         for level, color in cases.items():
-            self.run_test(level, color)
+            self._run_test(level, color)
 
     def test_non_str_messages(self) -> None:
         cases: Dict[str, str] = {
@@ -52,7 +52,7 @@ class TestClarity(unittest.TestCase):
             "debug": fore.STEEL_BLUE,
         }
         for level, color in cases.items():
-            self.run_test(level, color, use_str=False)
+            self._run_test(level, color, use_str=False)
 
 
 def suite():

@@ -13,7 +13,7 @@ setup(
     author="singhsays",
     author_email="singhsays@gmail.com",
     url="https://github.com/rockstardevs/clarity-py",
-    download_url="https://github.com/rockstardevs/clarity-py/archive/v0.1.1.tar.gz",
+    download_url="https://github.com/rockstardevs/clarity-py/archive/v0.1.2.tar.gz",
     keywords=["logging", "absl", "log",],
     install_requires=["absl-py", "colored",],
     classifiers=[

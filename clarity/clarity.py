@@ -12,29 +12,29 @@ from colored import fore, style
 
 def fatal(msg, *args, **kwargs):
     """Logs a fatal message."""
-    logging.fatal(fore.RED + msg + style.RESET, *args, **kwargs)
+    logging.fatal("{}{}{}".format(fore.RED, msg, style.RESET), *args, **kwargs)
 
 
 def error(msg, *args, **kwargs):
     """Logs an error message."""
-    logging.error(fore.LIGHT_RED + msg + style.RESET, *args, **kwargs)
+    logging.error("{}{}{}".format(fore.LIGHT_RED, msg, style.RESET), *args, **kwargs)
 
 
 def warning(msg, *args, **kwargs):
     """Logs a warning message."""
-    logging.warning(fore.YELLOW + msg + style.RESET, *args, **kwargs)
+    logging.warning("{}{}{}".format(fore.YELLOW, msg, style.RESET), *args, **kwargs)
 
 
 def info(msg, *args, **kwargs):
     """Logs an info message."""
-    logging.info(fore.DARK_GRAY + msg + style.RESET, *args, **kwargs)
+    logging.info("{}{}{}".format(fore.DARK_GRAY, msg, style.RESET), *args, **kwargs)
 
 
 def debug(msg, *args, **kwargs):
     """Logs a debug message."""
-    logging.debug(fore.STEEL_BLUE + msg + style.RESET, *args, **kwargs)
+    logging.debug("{}{}{}".format(fore.STEEL_BLUE, msg, style.RESET), *args, **kwargs)
 
 
 def exception(msg, *args):
     """Logs an exception."""
-    logging.exception(fore.ORANGE_1 + msg + style.RESET, *args)
+    logging.exception("{}{}{}".format(fore.ORANGE_1, msg, style.RESET), *args)

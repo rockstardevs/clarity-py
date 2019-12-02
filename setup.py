@@ -28,5 +28,5 @@ setup(
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
     ],
-    long_description=open("README.md").read(),
+    long_description=open("README.rst").read(),
 )
